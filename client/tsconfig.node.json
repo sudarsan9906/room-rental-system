@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+      "types": ["@tabler/icons-react", /* other types */]
+      // other compiler options...
+    }
+  }

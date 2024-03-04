@@ -25,16 +25,20 @@ const userSchema = new Schema(
      role: {
       type: String,
       default: "client",
+     },
+     phoneno: {
+      type: Number,
+      required: true,
      }
   },
   { timestamps: true }
 );
 
-userSchema.statics.createUser = async function (email, password, name, role) {
+userSchema.statics.createUser = async function (email, password, name, role, phoneno) {
 
     // validation
-    if(!email || !password || !name ) {
-        throw Error("fillup email, password and name")
+    if(!email || !password || !name || !phoneno) {
+        throw Error("fillup email, password, name, phone number")
     }
 
     const exists = await this.findOne({email})
@@ -46,7 +50,7 @@ userSchema.statics.createUser = async function (email, password, name, role) {
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(password, salt)
 
-    const user = await this.create({email, password: hash, name, role})
+    const user = await this.create({email, password: hash, name, role, phoneno})
 
     return user
 }

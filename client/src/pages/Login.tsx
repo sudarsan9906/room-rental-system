@@ -31,6 +31,7 @@ export default function Login(props: PaperProps) {
       email: "",
       name: "",
       password: "",
+      phoneno: "",
       terms: true,
     },
 
@@ -87,6 +88,7 @@ export default function Login(props: PaperProps) {
         email: form.values.email,
         password: form.values.password,
         name: form.values.name,
+        phoneno: form.values.phoneno,
       });
     },
     mutationKey: ["registerUser"],
@@ -96,7 +98,6 @@ export default function Login(props: PaperProps) {
         title: "Success",
         message: "registration sucessfully! please wait for the verification.",
         // icon: <IconCheck />,
-        
       });
       form.reset();
     },
@@ -141,6 +142,18 @@ export default function Login(props: PaperProps) {
                 value={form.values.name}
                 onChange={(event) =>
                   form.setFieldValue("name", event.currentTarget.value)
+                }
+                radius="md"
+              />
+            )}
+
+            {type === "register" && (
+              <TextInput
+                label="Phone Number"
+                placeholder="Your Phone Number"
+                value={form.values.phoneno}
+                onChange={(event) =>
+                  form.setFieldValue("phoneno", event.currentTarget.value)
                 }
                 radius="md"
               />

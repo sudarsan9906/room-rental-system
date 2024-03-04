@@ -8,10 +8,10 @@ const creatoken = (_id) => {
 };
 
 const createUser = async (req, res) => {
-  const { email, password, name, role } = req.body;
+  const { email, password, name, role, phoneno } = req.body;
 
   try {
-    const user = await userModel.createUser(email, password, name, role);
+    const user = await userModel.createUser(email, password, name, role, phoneno);
     const token = creatoken(user._id);
     res.status(201).json({ token, user });
   } catch (err) {

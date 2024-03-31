@@ -1,64 +1,3 @@
-// import { Divider } from "@mantine/core";
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-
-// const Project = () => {
-//   const [data, setData] = useState([
-//     { id: 1, title: "man power system" },
-//     { id: 2, title: "virtuall vr/ar" },
-//     { id: 3, title: "intelliante sytem" },
-//   ]);
-
-//   const deleteHandler = (id: any) => {
-//     const deltedItem = data.filter((items) => {
-//       return items.id !== id;
-//     });
-
-//     setData(deltedItem);
-//   };
-
-//   return (
-//     <>
-//   <div className="flex justify-between items-center my-4">
-//     <h2 className="text-white">List of Projects</h2>
-
-//     <Link to={"/dashboard/admin/clients/addclient"}>
-//       <button className="p-1 rounded-sm hover:bg-slate-500 hover:text-white cursor-pointer">
-//         Create Project
-//       </button>
-//     </Link>
-//   </div>
-
-//       <div className="flex gap-3">
-//         {data.map((item) => {
-//           return (
-//             <div
-//               key={item.id}
-//               className="shadow-md bg-slate-200 p-4 rounded-md"
-//             >
-//               <h3 className=" ">{item.title}</h3>
-//               <Divider label="" labelPosition="center" my="lg" />
-//               <div className="flex justify-between gap-4 items-center">
-//                 <button className="p-2 bg-green-300 cursor-pointer">
-//                   edit
-//                 </button>
-//                 <button
-//                   className="p-2 bg-red-300 cursor-pointer"
-//                   onClick={() => deleteHandler(item.id)}
-//                 >
-//                   Delete
-//                 </button>
-//               </div>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Project;
-
 import React, { useState } from "react";
 
 import {
@@ -79,19 +18,19 @@ export default function TaskCard() {
   const [data, setData] = useState([
     {
       id: 1,
-      title: "man power system",
+      title: "Room in baneshwor",
       description:
         "log  asdasd asdsdasd asdasdasda asdlkasdlasd asda sdasl;dkasldka",
     },
     {
       id: 2,
-      title: "virtuall vr/ar",
+      title: "Room in dhumbarahi",
       description:
         "logasdasd asdsdasd asdasdasda asdlkasdlasd asda sdasl;dkasldka",
     },
     {
       id: 3,
-      title: "intelliante sytem",
+      title: "Flat in akashedhara",
       description:
         "log asdasd asdsdasd asdasdasda asdlkasdlasd asda sdasl;dkasldka",
     },
@@ -108,10 +47,10 @@ export default function TaskCard() {
   return (
     <>
       <div className="flex justify-between items-center my-4">
-        <h2 className="text-white">List of Projects</h2>
+        <h2 className="text-white">List of Rooms</h2>
 
         <Link to={"/dashboard/admin/projects/createproject"}>
-          <Button>Create Project</Button>
+          <Button>Create Room</Button>
         </Link>
       </div>
 
@@ -132,14 +71,16 @@ export default function TaskCard() {
                   {item.description}
                 </Text>
 
-                <Text c="dimmed" fz="sm" mt="md">
+                <img className="my-3" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+                {/* <Text c="dimmed" fz="sm" mt="md">
                   Tasks completed:{" "}
                   <Text span fw={500} c="bright">
                     23/36
                   </Text>
-                </Text>
+                </Text> */}
 
-                <Progress value={(23 / 36) * 100} mt={5} />
+                {/* <Progress value={(23 / 36) * 100} mt={5} /> */}
 
                 <Group mt={15}>
                     <Link to={"/dashboard/admin/projects/editproject/" + item.id}>

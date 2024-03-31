@@ -2,6 +2,8 @@ import React from 'react'
 import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
+import DragandDrop from "../../components/ui/Draganddrop/Draganddrop"
+
 const EditProject = () => {
     const form = useForm({
         initialValues: {
@@ -22,7 +24,7 @@ const EditProject = () => {
       fw={900}
       ta="center"
     >
-      Edit Project
+      Edit Room
     </Title>
 
 
@@ -34,6 +36,9 @@ const EditProject = () => {
       variant="filled"
       {...form.getInputProps('title')}
     />
+
+    <DragandDrop />
+
     <Textarea
       mt="md"
       label="Description"
@@ -48,7 +53,7 @@ const EditProject = () => {
 
     <Group justify="center" mt="xl">
       <Button type="submit" size="md">
-        Edit Project
+        Edit Room
       </Button>
     </Group>
   </form>

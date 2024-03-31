@@ -13,22 +13,11 @@ import classes from "./NavbarSimple.module.css";
 import { NavLink } from "react-router-dom";
 
 const data = [
-  { link: "/dashboard/admin/staffs", label: "Staffs", icon: IconUserScan },
   { link: "/dashboard/admin/clients", label: "Clients", icon: IconUserDollar },
   {
-    link: "/dashboard/admin/createemail",
-    label: "Create Email",
-    icon: IconMailForward,
-  },
-  {
     link: "/dashboard/admin/projects",
-    label: "Projects",
+    label: "Rooms",
     icon: IconPresentationAnalytics,
-  },
-  {
-    link: "/dashboard/admin/sendreward",
-    label: "Send reward",
-    icon: IconAward,
   },
 ];
 

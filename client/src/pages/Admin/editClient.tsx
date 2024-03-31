@@ -113,7 +113,7 @@ const editClient = () => {
 
           <Select
             comboboxProps={{ withinPortal: true }}
-            data={["client", "staff"]}
+            data={["client", "admin"]}
             placeholder="Pick one"
             label="Change role"
             onChange={(option) => form.setFieldValue("role", option)}

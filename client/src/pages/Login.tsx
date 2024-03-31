@@ -62,13 +62,9 @@ export default function Login(props: PaperProps) {
 
       if (data.data.role === "client") {
         return navigate("/dashboard/client");
-      } else if (data.data.role === "admin") {
-        return navigate("/dashboard/admin/staffs");
-      } else if (data.data.role === "staff") {
-        return navigate("/dashboard/staff");
-      } else {
-        return navigate("/dashboard/projectteam");
-      }
+      } else  {
+        return navigate("/dashboard/admin/clients");
+      } 
     },
     onError: (error: any) => {
       console.log(error);
@@ -124,7 +120,7 @@ export default function Login(props: PaperProps) {
         className="bg-[#eee]"
       >
         <Text size="lg" fw={500}>
-          Welcome to Knowledge Management System, {type} with
+          Welcome to Room Rental System, {type} with
         </Text>
 
         <Divider label="" labelPosition="center" my="lg" />

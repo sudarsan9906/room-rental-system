@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
 import ClientListing from "./pages/Admin/clientListing";
+import Homepage from "./pages/HomePage"
 
 import EditProject from "./pages/Admin/EditProject";
 import CreateProject from "./pages/Admin/CreateProject";
@@ -24,7 +25,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
       
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Login />} />
 
           <Route path="/dashboard/admin/" element={<Admin />}>
 
